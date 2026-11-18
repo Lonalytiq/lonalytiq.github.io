@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LonalytIQ | Network Visibility & Quality of Experience Analytics</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1f74c4;
+      --bg-black: #ffffff;
+      --bg-card: #ffffff;
+      --text-main: #0f1b2a;
+      --text-muted: #4a5a6e;
+      --border: rgba(15, 27, 42, 0.12);
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-black);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+    }
+    .navbar-brand {
+      font-weight: 800;
+      color: var(--primary) !important;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+    }
+    .brand-logo { height: 32px; margin-right: 12px; }
+    .nav-link { color: var(--text-muted) !important; font-weight: 500; }
+    .nav-link:hover { color: var(--primary) !important; }
+
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: radial-gradient(circle at top right, #e3effb 0%, #ffffff 60%);
+      padding-top: 80px;
+    }
+
+    h1 { font-weight: 800; font-size: clamp(2.5rem, 7vw, 4.5rem); letter-spacing: -2px; margin-bottom: 1.5rem; }
+    .highlight { color: var(--primary); text-shadow: none; }
+
+    .feature-card {
+      background: var(--bg-card);
+      padding: 2.5rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      height: 100%;
+      box-shadow: 0 4px 14px rgba(15, 27, 42, 0.05);
+      transition: all 0.3s ease;
+    }
+    .feature-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(15, 27, 42, 0.10);
+    }
+    .feature-card h4 { font-weight: 700; margin-bottom: 1rem; color: var(--text-main); }
+    .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff !important;
+      border: none;
+      padding: 14px 32px;
+      font-weight: 700;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover { background: #155a9c; transform: translateY(-2px); }
+
+    .btn-outline-light {
+      border-radius: 10px;
+      padding: 14px 32px;
+      border: 1px solid rgba(15, 27, 42, 0.25);
+      color: var(--text-main);
+      transition: all 0.2s ease;
+    }
+    .btn-outline-light:hover {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+
+    section { padding: 100px 0; }
+
+    .section-label {
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    /* Metric strip */
+    .metric-value {
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--primary);
+      letter-spacing: -1px;
+    }
+    .metric-label { color: var(--text-muted); font-size: 0.9rem; }
+
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--bg-black); }
+    ::-webkit-scrollbar-thumb { background: #c5d0dc; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        LonalytIQ
+      </a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link px-3" href="#challenge">Challenge</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#advantage">Advantage</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="#capabilities">Capabilities</a></li>
+          <li class="nav-item"><a class="btn btn-primary ms-lg-4" href="mailto:demo@lonalytiq.com">Request Demo</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-duration="1200">
+          <span class="section-label">Network Analytics & Quality of Experience</span>
+          <h1>See Your Network the Way <span class="highlight">Subscribers</span> Do</h1>
+          <p class="lead mb-5" style="color: var(--text-muted); font-size: 1.3rem; max-width: 650px;">
+            End-to-end visibility from radio to core to peering. Measure real Quality of Experience, pinpoint congestion and bottlenecks, and turn traffic data into concrete optimization decisions.
+          </p>
+          <div class="d-flex gap-3">
+            <a href="#advantage" class="btn btn-primary">Discover Platform</a>
+            <a href="#capabilities" class="btn btn-outline-light">View Capabilities</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metric strip -->
+  <div class="container">
+    <div class="row text-center g-4 pb-5" data-aos="fade-up">
+      <div class="col-6 col-md-3">
+        <div class="metric-value">MOS</div>
+        <div class="metric-label">Per-app experience scoring</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="metric-value">&lt;1s</div>
+        <div class="metric-label">Congestion detection latency</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="metric-value">L1&ndash;L7</div>
+        <div class="metric-label">Full-stack flow visibility</div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="metric-value">Billions</div>
+        <div class="metric-label">Records processed daily</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="challenge">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <span class="section-label">The Problem</span>
+          <h2 class="display-5 fw-bold mb-4">Blind Spots Cost Experience</h2>
+          <p class="mb-4" style="color: var(--text-muted);">Operators see counters, not experience. Element managers report that a cell is "up" while subscribers on it are buffering, timing out, and dropping calls. Traffic keeps growing, encryption hides the application mix, and congestion moves faster than manual analysis can follow.</p>
+          <p class="mb-5" style="color: var(--text-muted);">LonalytIQ closes the gap between "the network is running" and "the network feels fast," measuring quality as the subscriber actually experiences it.</p>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="feature-card" data-aos="zoom-in" style="border-left: 4px solid var(--primary);">
+            <h4 style="color: var(--primary);">The Visibility Gap</h4>
+            <p>Node-level KPIs tell you a link is 80% utilized. They do not tell you that video start delay tripled on that path last Tuesday at 8pm, or which backhaul segment caused it. LonalytIQ correlates the two automatically.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="advantage" style="background: #f4f7fb;">
+    <div class="container text-center mb-5">
+      <span class="section-label" data-aos="fade-up">Our Edge</span>
+      <h2 class="display-6 fw-bold" data-aos="fade-up">Experience-First Analytics</h2>
+    </div>
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-card">
+            <h4>Measure What Users Feel</h4>
+            <p>Video MOS, voice MOS, rebuffering ratio, page load and app response times, derived per service and per segment, not just raw throughput counters.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-card">
+            <h4>Macro to Micro</h4>
+            <p>Start at a nationwide view of congestion and application trends, then drill down to a single cell, link, or gateway to find the exact bottleneck.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-card">
+            <h4>Understand the Traffic Mix</h4>
+            <p>See how much of your capacity goes to video, social, gaming, and cloud services, so planning teams can size the network to real demand.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capabilities">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="section-label">Our Solution</span>
+        <h2 class="display-6 fw-bold">Complete Network Analytics Suite</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Quality of Experience Scoring</h4>
+            <p>Continuous per-application QoE measurement across the network: video MOS and start-up delay, rebuffering ratio, voice MOS for VoLTE/VoWiFi, web page load times, and TCP/DNS handshake latency. See exactly which services are degrading and where, before the complaints arrive.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">End-to-End Network Visibility</h4>
+            <p>Full-stack flow visibility across access, backhaul, core, and peering. Map which paths carry which traffic, correlate flows across every layer, and follow a session from the radio all the way to the upstream CDN in a single view.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Congestion & Bottleneck Detection</h4>
+            <p>Automatically surface congested cells, saturated backhaul links, and overloaded gateways. Correlate utilization spikes with QoE drops to determine whether the bottleneck is radio, transport, core, or upstream peering, and rank issues by subscriber impact.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Congestion Path Monitoring</h4>
+            <p>Track how congestion propagates across the topology over time. Visualize time-of-day patterns, recurring hotspots, and the exact links contributing to degradation, so planning teams act on trends rather than isolated alarms.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Optimization Recommendations</h4>
+            <p>Turn visibility into action: capacity-planning guidance, traffic-steering and load-balancing opportunities, CDN and cache-placement insights, peering optimization, and offload candidates for Wi-Fi and small cells, each quantified by expected experience gain.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Application & Traffic Mix Analytics</h4>
+            <p>Understand the composition of traffic driving your capacity needs. Track the share and growth of video, social, gaming, and cloud services, and forecast where demand is heading so investment lands where it matters.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Experience Segmentation</h4>
+            <p>Compare how different device types, service tiers, and usage profiles experience the network. Verify premium SLA adherence, spot underserved segments, and understand heavy-user impact, all in aggregate without touching individual content.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Geospatial Performance Mapping</h4>
+            <p>See QoE and congestion on the map. Identify geographic zones with poor video quality, high latency, or recurring congestion, and overlay them with cell and backhaul topology to prioritize where investment delivers the most improvement.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Real-Time Dashboards & KPIs</h4>
+            <p>A single pane of glass for network operations and planning. Live dashboards surface the KPIs that matter, MOS, PRB and link utilization, latency, jitter, packet loss, throughput per subscriber, and a composite congestion index, with drill-down from nationwide to node level.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Proactive Alerting & Anomaly Detection</h4>
+            <p>Set thresholds on experience and utilization metrics and get notified the moment a cell, link, or service crosses them. Baseline-driven anomaly detection flags unusual degradation automatically, shortening time-to-detection from hours to seconds.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">AI & Machine Learning Core</h4>
+            <p>An analytics engine that does more than report. Machine learning forecasts capacity exhaustion, detects abnormal experience patterns, correlates QoE drops to root-cause locations, and features a natural-language query layer that turns billions of flow records into clear visual answers.</p>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up">
+          <div class="feature-card">
+            <h4 style="color: var(--primary);">Integration & Data Sources</h4>
+            <p>Fit into the existing OSS/BSS stack. Ingest from probes, DPI, and network element managers, and expose results through open APIs and direct database connections so QoE and congestion insight flows into planning, assurance, and reporting tools.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="text-center py-5 border-top" style="background: #f4f7fb;">
+    <div class="container" data-aos="fade-up">
+      <h2 class="mb-4">Ready for Total Network Visibility?</h2>
+      <a href="mailto:demo@lonalytiq.com" class="btn btn-primary btn-lg px-5">Contact Us: demo@lonalytiq.com</a>
+      <p class="mt-5 text-muted small">&copy; 2026 LonalytIQ. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false,
+      mirror: true,
+      offset: 50
+    });
+  </script>
+</body>
+</html>
